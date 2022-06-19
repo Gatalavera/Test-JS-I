@@ -19,5 +19,8 @@
   "license": "ISC",
   "jest": {
     "testURL": "http://localhost/"
+  },
+  "dependencies": {
+    "code": "^5.2.4"
   }
 }
