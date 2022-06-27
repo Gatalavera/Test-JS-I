@@ -113,6 +113,12 @@ function esEntero(numero) {
   // De lo contrario, devuelve "false"
   // Pista: Puedes resolver esto usando `Math.floor`
   // Tu código:
+  if (numero - Math.floor(numero)== 0){
+    return true;
+  }
+  else{
+    return false;
+  }
 }
 
 function fizzBuzz(numero) {
@@ -188,33 +194,35 @@ function esPrimo(numero) {
   // Pista: un número primo solo es divisible por sí mismo y por 1
   // Pista 2: Puedes resolverlo usando un bucle `for`
   // Nota: Los números 0 y 1 NO son considerados números primos
-  if (numero==0 || numero==1 || numero==4){
-    for(i=2;i<numero/2;i++){
-      if (numero%i==0){
-        return false;
-      }
-    }
-  }
-  else{
-    return true;
-  }
+  if (numero == 0 || numero == 1 || numero == 4) 
+  return false;
+for (x = 2; x < numero / 2; x++) {
+  if (numero % x == 0) 
+      return false;
+}
+return true;
 }
 
 function tablaDelSeis() {
   //Escribe una función que muestre la tabla de multiplicar del 6 (del 0 al 60).
   //La función devuelve un array con los resultados de la tabla de multiplicar del 6 en orden creciente.
   //Escribe tu código aquí   
-  for(i=0;i<=9;i++){
-   let a=[i*6];
-   return a;
+  let a=[0,1,2,3,4,5,6,7,8,9,10];
+  let b = a.map(function(x){return x*6;});
+  return b;
   }
-}
 
 function doWhile(numero) {
   //Implementar una función tal que vaya aumentando el valor recibido en 5 hasta un límite de 8 veces
   //Retornar el valor final.
   //Usar el bucle do ... while.
-}
+  let i=0
+  do {
+    numero +=5;
+    i++;}
+  while(i<8)
+    return numero;
+  }
 
 // No modificar nada debajo de esta línea, sino no correrán los test.
 // --------------------------------
